@@ -56,11 +56,11 @@ const Home: React.FC = () => {
             <div>
               <div className="inline-flex items-center space-x-2 text-oho-yellow font-black text-xs uppercase tracking-[0.4em] mb-6">
                 <span className="w-10 h-px bg-oho-yellow"></span>
-                <span>The OHO Methodology</span>
+                <span>Our Methodology</span>
               </div>
               <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-8 leading-[1.1] tracking-tight">
-                We Streamline Business Process that Drive<br />
-                <span className="text-yellow-600">Scalable Results.</span>
+                We Streamline Business Process, <br/>
+                <span className="text-yellow-500">Produce Scalable Results.</span>
               </h2>
               <p className="text-xl text-gray-500 mb-12 leading-relaxed font-medium">
                 Software is just a tool. Without the right business logic, it's just an expense. OHO CRM Experts bridge the gap between powerful Zoho features and your unique business goals.
