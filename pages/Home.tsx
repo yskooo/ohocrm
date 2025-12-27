@@ -14,8 +14,13 @@ const Home: React.FC = () => {
       {/* Trust Bar */}
       <div className="py-12 bg-slate-50 border-y border-gray-100 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 flex flex-wrap justify-center items-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all">
+          <img 
+            src="./zoho-authorized-partner.png" 
+            alt="zoho authorized partner" 
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
           <span className="text-2xl font-black text-slate-900">ZOHO PARTNER</span>
-          <span className="text-xl font-bold">SYDNEY • MELBOURNE • BRISBANE</span>
+          <span className="text-xl font-black text-slate-900 font-bold">SYDNEY • MELBOURNE • BRISBANE</span>
           <span className="text-2xl font-black text-slate-900 italic">AUTOMATION EXPERTS</span>
         </div>
       </div>

@@ -68,16 +68,16 @@ export const INDUSTRIES: Industry[] = [
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: '1',
-    name: 'Sarah Jenkins',
+    name: 'Kopak Auto',
     company: 'Prime Properties AU',
-    text: 'OHO transformed our messy lead system into a streamlined Zoho machine. We saved 20 hours a week on admin.',
+    text: 'I wanna learn about zoho inventory any one can help me. I will pay for it',
     rating: 5
   },
   {
     id: '2',
-    name: 'David Chen',
+    name: 'Lachlan Kerr',
     company: 'Elite Consulting',
-    text: 'The customization they built for our pipeline is world-class. Highly recommend their expert consultants.',
+    text: 'Thank you, Sharvan, for your time – your broad knowledge of the Zoho CRM product was really evident throughout our chat – which you presented in a friendly, simple, effective and very useful way. We are enthusiastic to get started and customise Zoho CRM for our current business needs. Your advice and tips were very much appreciated.',
     rating: 5
   }
 ];
