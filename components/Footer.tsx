@@ -51,15 +51,15 @@ const Footer: React.FC = () => {
             <ul className="space-y-4 text-slate-400">
               <li className="flex items-start space-x-3">
                 <i className="fas fa-map-marker-alt mt-1"></i>
-                <span>Sydney, NSW, Australia</span>
+                <span>P.O Box 1093 Windsor VIC 3181, Sydney, NSW, Australia</span>
               </li>
               <li className="flex items-start space-x-3">
                 <i className="fas fa-envelope mt-1"></i>
-                <span>contact@ohocrm.com.au</span>
+                <span>care@ohocrmsoftware.com.au</span>
               </li>
               <li className="flex items-start space-x-3">
                 <i className="fas fa-phone-alt mt-1"></i>
-                <span>+61 (02) 0000 0000</span>
+                <span>+61 480 018 157</span>
               </li>
             </ul>
           </div>

@@ -23,9 +23,9 @@ const Navbar: React.FC = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-3">
               <img src={LOGO_URL} alt="OHO Logo" className="w-10 h-10" />
-              <div className="flex flex-col">
+              <div className="flex flex-col text-gray-800">
                 <span className="font-bold text-xl tracking-tight leading-none">OHO CRM</span>
-                <span className="text-xs font-semibold text-gray-500 uppercase tracking-widest">Consulting</span>
+                <span className="text-xs font-semibold uppercase tracking-widest">Consulting</span>
               </div>
             </Link>
           </div>
