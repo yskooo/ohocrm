@@ -17,8 +17,7 @@ const FloatingCTA: React.FC = () => {
               <span>Direct Path to Growth</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-black text-black mb-6 leading-[1.1] tracking-tight">
-              Ready to turn your Zoho <br /> 
-              into a <span className="bg-black/5 px-2 rounded-lg">Sales Machine?</span>
+              Ready to turn your CRM into a <span className="bg-black/5 px-2 rounded-lg">Sales Machine?</span>
             </h2>
             <p className="text-xl text-black/80 font-medium leading-relaxed">
               Join 100+ Australian businesses that have already scaled their operations with our certified implementation experts.

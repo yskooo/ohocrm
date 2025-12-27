@@ -11,7 +11,7 @@ const Home: React.FC = () => {
     { title: 'Zoho One', path: '/zoho', desc: 'The Operating System for Business', icon: 'fa-layer-group' },
     { title: 'Zoho CRM', path: '/zoho/zoho-crm', desc: 'Modern Sales Automation', icon: 'fa-users-viewfinder' },
     { title: 'Zoho Forms', path: '/zoho/zoho-forms', desc: 'Advanced Lead Capture', icon: 'fa-wpforms' },
-    { title: 'AU Partner', path: '/zoho/zoho-partner-australia', desc: 'Local Implementation Experts', icon: 'fa-handshake' },
+    { title: 'Zoho Partner Australia', path: '/zoho/zoho-partner-australia', desc: 'Local Implementation Experts', icon: 'fa-handshake' },
   ];
 
   return (
@@ -59,8 +59,8 @@ const Home: React.FC = () => {
                 <span>The OHO Methodology</span>
               </div>
               <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-8 leading-[1.1] tracking-tight">
-                We don't just 'Setup' Zoho. <br />
-                <span className="text-yellow-600">We Architect Success.</span>
+                We Streamline Business Process that Drive<br />
+                <span className="text-yellow-600">Scalable Results.</span>
               </h2>
               <p className="text-xl text-gray-500 mb-12 leading-relaxed font-medium">
                 Software is just a tool. Without the right business logic, it's just an expense. OHO CRM Experts bridge the gap between powerful Zoho features and your unique business goals.
