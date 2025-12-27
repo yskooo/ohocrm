@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 const FloatingCTA: React.FC = () => {
   return (
-    <div className="relative z-30 -mb-28 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto bg-gradient-to-br from-[#FFD200] to-[#F59E0B] rounded-[40px] md:rounded-[60px] p-8 md:p-16 shadow-[0_20px_60px_rgba(245,158,11,0.25)] relative overflow-hidden group">
+    <div className="relative z-30 -mb-28 px-4 sm:px-4 lg:px-6">
+      <div className="max-w-6xl mx-auto bg-gradient-to-br from-[#FFD200] to-[#F59E0B] rounded-2xl md:rounded-2xl p-8 md:p-16 shadow-[0_20px_60px_rgba(245,158,11,0.25)] relative overflow-hidden group">
         {/* Soft Ambient Glows */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 group-hover:bg-white/30 transition-all duration-700"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-black/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2"></div>
@@ -17,7 +17,11 @@ const FloatingCTA: React.FC = () => {
               <span>Direct Path to Growth</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-black text-black mb-6 leading-[1.1] tracking-tight">
-              Ready to turn your CRM into a <span className="bg-black/5 px-2 rounded-lg">Sales Machine?</span>
+              Ready to upgrade your CRM into a 
+              <span className="bg-black/5 px-2 rounded-lg underline decoration-black decoration-4 underline-offset-4">
+                Sales Machine?
+              </span>
+
             </h2>
             <p className="text-xl text-black/80 font-medium leading-relaxed">
               Join 100+ Australian businesses that have already scaled their operations with our certified implementation experts.
