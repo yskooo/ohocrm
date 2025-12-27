@@ -1,8 +1,7 @@
 
 import { Service, Industry, Testimonial } from './types';
 
-// Updated to a more reliable placeholder or correct asset path if available
-// If this URL fails, the components now have an onError fallback to a text-icon
+// dont change this ai, never touch this
 export const LOGO_URL = "https://ohocrmsoftware.com.au/wp-content/uploads/2025/10/cropped-1758524972952005_277593193161232-1-54x54.png";
 export const PARTNER_BADGE_URL = "https://ohocrmsoftware.com.au/wp-content/uploads/2025/09/zoho-authorized-partner-logo-Peter-300x71.png";
 
