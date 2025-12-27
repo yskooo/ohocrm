@@ -40,28 +40,32 @@ export const INDUSTRIES: Industry[] = [
     name: 'Real Estate',
     description: 'Manage listings, leads, and follow-ups automatically.',
     icon: 'fa-building',
-    challenges: ['Lead Leakage', 'Inefficient Follow-ups', 'Manual Property Matching']
+    challenges: ['Lead Leakage', 'Manual Follow-ups', 'Lost Property Matches'],
+    zohoStack: ['Zoho CRM', 'Zoho Sign', 'Zoho Forms', 'Zoho Campaigns']
   },
   {
     id: 'professional-services',
     name: 'Professional Services',
     description: 'Streamline client onboarding and project management.',
     icon: 'fa-briefcase',
-    challenges: ['Inconsistent Client Onboarding', 'Siloed Project Data', 'Complex Billing']
+    challenges: ['Siloed Project Data', 'Complex Billing', 'Unclear Utilization'],
+    zohoStack: ['Zoho CRM', 'Zoho Projects', 'Zoho Books', 'Zoho People']
   },
   {
     id: 'ecommerce',
     name: 'E-commerce',
     description: 'Connect your store with your CRM for ultimate customer insights.',
     icon: 'fa-shopping-cart',
-    challenges: ['Order Management', 'Customer Retention', 'Abandoned Cart Recovery']
+    challenges: ['Inventory Mismatches', 'Fragmented Customer Data', 'Manual Order Entry'],
+    zohoStack: ['Zoho CRM', 'Zoho Inventory', 'Zoho Analytics', 'Zoho Flow']
   },
   {
     id: 'sme',
     name: 'SMEs',
     description: 'Enterprise-level tools optimized for small business growth.',
     icon: 'fa-chart-line',
-    challenges: ['Limited Resources', 'Need for Scalability', 'Disconnected Data']
+    challenges: ['Limited Visibility', 'Disjointed Tools', 'Hard to Scale'],
+    zohoStack: ['Zoho One', 'Zoho CRM Plus', 'Zoho Finance Suite']
   }
 ];
 

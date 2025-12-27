@@ -13,6 +13,7 @@ export interface Industry {
   description: string;
   icon: string;
   challenges: string[];
+  zohoStack: string[];
 }
 
 export interface Testimonial {
