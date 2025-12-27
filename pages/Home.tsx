@@ -7,57 +7,125 @@ import { INDUSTRIES, TESTIMONIALS } from '../constants';
 import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
+  const zohoNodes = [
+    { title: 'Zoho One', path: '/zoho', desc: 'The Operating System for Business', icon: 'fa-layer-group' },
+    { title: 'Zoho CRM', path: '/zoho/zoho-crm', desc: 'Modern Sales Automation', icon: 'fa-users-viewfinder' },
+    { title: 'Zoho Forms', path: '/zoho/zoho-forms', desc: 'Advanced Lead Capture', icon: 'fa-wpforms' },
+    { title: 'AU Partner', path: '/zoho/zoho-partner-australia', desc: 'Local Implementation Experts', icon: 'fa-handshake' },
+  ];
+
   return (
-    <div>
+    <div className="bg-white">
       <Hero />
       
-      {/* Trust Bar */}
-      <div className="py-12 bg-slate-50 border-y border-gray-100 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 flex flex-wrap justify-center items-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all">
-          <img 
-            src="./zoho-authorized-partner.png" 
-            alt="zoho authorized partner" 
-            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-          <span className="text-2xl font-black text-slate-900">ZOHO PARTNER</span>
-          <span className="text-xl font-black text-slate-900 font-bold">SYDNEY • MELBOURNE • BRISBANE</span>
-          <span className="text-2xl font-black text-slate-900 italic">AUTOMATION EXPERTS</span>
+      {/* Trust Bar - High Contrast */}
+      <div className="py-12 bg-slate-900 overflow-hidden relative border-y border-slate-800">
+        <div className="absolute inset-0 bg-oho-yellow/5"></div>
+        <div className="max-w-7xl mx-auto px-4 flex flex-wrap justify-center items-center gap-12 md:gap-24 relative z-10">
+          <div className="flex flex-col items-center md:items-start group cursor-default">
+             <span className="text-oho-yellow font-black text-2xl tracking-tighter group-hover:scale-105 transition-transform">ZOHO AUTHORIZED PARTNER</span>
+             <span className="text-slate-500 text-[10px] font-black uppercase tracking-[0.4em]">Verified Implementation Specialist</span>
+          </div>
+          <div className="h-10 w-px bg-slate-800 hidden lg:block"></div>
+          <div className="text-white/40 font-black text-sm tracking-[0.2em] flex gap-10">
+             <span className="hover:text-oho-yellow transition-colors">SYDNEY</span>
+             <span className="hover:text-oho-yellow transition-colors">MELBOURNE</span>
+             <span className="hover:text-oho-yellow transition-colors">BRISBANE</span>
+             <span className="hover:text-oho-yellow transition-colors">PERTH</span>
+          </div>
         </div>
       </div>
+
+      {/* Intro to Services - Strategy Focus */}
+      <section className="py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-24 items-center">
+            <div>
+              <div className="inline-flex items-center space-x-2 text-oho-yellow font-black text-xs uppercase tracking-[0.4em] mb-6">
+                <span className="w-10 h-px bg-oho-yellow"></span>
+                <span>The OHO Methodology</span>
+              </div>
+              <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-8 leading-[1.1] tracking-tight">
+                We don't just 'Setup' Zoho. <br />
+                <span className="text-yellow-600">We Architect Success.</span>
+              </h2>
+              <p className="text-xl text-gray-500 mb-12 leading-relaxed font-medium">
+                Software is just a tool. Without the right business logic, it's just an expense. OHO CRM Experts bridge the gap between powerful Zoho features and your unique business goals.
+              </p>
+              <div className="grid gap-6 mb-12">
+                <div className="flex items-center space-x-5 p-6 bg-slate-50 rounded-[32px] border border-slate-100 group hover:border-oho-yellow transition-all">
+                   <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-oho-yellow shadow-sm group-hover:bg-oho-yellow group-hover:text-black transition-colors"><i className="fas fa-chart-line text-xl"></i></div>
+                   <div>
+                      <h4 className="font-black text-slate-900">40% Growth in Conversion</h4>
+                      <p className="text-xs text-slate-500 font-bold uppercase tracking-wider">Average client result post-optimization</p>
+                   </div>
+                </div>
+                <div className="flex items-center space-x-5 p-6 bg-slate-50 rounded-[32px] border border-slate-100 group hover:border-oho-yellow transition-all">
+                   <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-oho-yellow shadow-sm group-hover:bg-oho-yellow group-hover:text-black transition-colors"><i className="fas fa-clock text-xl"></i></div>
+                   <div>
+                      <h4 className="font-black text-slate-900">10+ Hours Saved Weekly</h4>
+                      <p className="text-xs text-slate-500 font-bold uppercase tracking-wider">Through custom workflow automation</p>
+                   </div>
+                </div>
+              </div>
+              <Link to="/services" className="inline-flex items-center font-black text-black border-b-4 border-oho-yellow pb-2 hover:border-black transition-all group">
+                Explore Full Service Suite <i className="fas fa-arrow-right ml-4 group-hover:translate-x-2 transition-transform"></i>
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 gap-6">
+               {zohoNodes.map((node) => (
+                 <Link 
+                   key={node.title} 
+                   to={node.path} 
+                   className="p-10 bg-white border border-slate-100 rounded-[50px] hover:bg-oho-yellow transition-all group flex flex-col justify-center items-center text-center shadow-xl hover:shadow-yellow-500/20 hover:-translate-y-4"
+                 >
+                    <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-white transition-all">
+                       <i className={`fas ${node.icon} text-3xl text-slate-400 group-hover:text-black`}></i>
+                    </div>
+                    <h3 className="font-black text-slate-900 text-xl mb-3">{node.title}</h3>
+                    <p className="text-[10px] text-gray-400 font-bold uppercase tracking-[0.2em] leading-tight group-hover:text-black/60">{node.desc}</p>
+                 </Link>
+               ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       <Services />
 
       <LeadQualifyBot />
 
       {/* Industries Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
-            <div className="max-w-xl">
-              <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Tailored Solutions for Your Industry</h2>
-              <p className="text-lg text-gray-600">
-                We don't believe in one-size-fits-all. Every industry has unique challenges, and we have the Zoho solutions to match.
+      <section className="py-32 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-20">
+            <div className="max-w-2xl">
+              <span className="text-oho-yellow font-black text-xs uppercase tracking-[0.4em] mb-4 block">Industry Verticals</span>
+              <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-6 tracking-tight leading-none">Specialized Logic for <br />Your Market.</h2>
+              <p className="text-xl text-gray-500 font-medium">
+                Generic CRM setups fail because they don't understand your unique challenges. We build for your reality.
               </p>
             </div>
-            <Link to="/industries" className="mt-6 md:mt-0 font-bold text-yellow-600 flex items-center">
-              View All Industries <i className="fas fa-arrow-right ml-2"></i>
+            <Link to="/industries" className="mt-8 md:mt-0 font-black text-black bg-oho-yellow px-12 py-5 rounded-full hover:bg-black hover:text-white transition-all shadow-xl shadow-yellow-500/10">
+              View All Industries
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-4 gap-8">
             {INDUSTRIES.map((industry) => (
-              <div key={industry.id} className="relative group overflow-hidden rounded-3xl h-64 bg-slate-100">
+              <div key={industry.id} className="relative group overflow-hidden rounded-[50px] h-[400px] bg-slate-200 shadow-2xl transition-all">
                 <img 
-                  src={`https://picsum.photos/seed/${industry.id}/600/400`} 
+                  src={`https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80&w=800`} 
                   alt={industry.name} 
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="absolute inset-0 w-full h-full object-cover grayscale brightness-50 transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div className="w-10 h-10 bg-oho-yellow rounded-xl flex items-center justify-center text-black mb-3">
-                    <i className={`fas ${industry.icon}`}></i>
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
+                <div className="absolute bottom-10 left-10 right-10">
+                  <div className="w-16 h-16 bg-oho-yellow rounded-3xl flex items-center justify-center text-black mb-6 transform -rotate-12 group-hover:rotate-0 transition-all duration-500">
+                    <i className={`fas ${industry.icon} text-2xl`}></i>
                   </div>
-                  <h3 className="text-xl font-bold text-white">{industry.name}</h3>
+                  <h3 className="text-3xl font-black text-white tracking-tight leading-none">{industry.name}</h3>
+                  <p className="text-oho-yellow text-xs mt-4 font-black uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">Explore Workflow <i className="fas fa-chevron-right ml-2"></i></p>
                 </div>
               </div>
             ))}
@@ -66,29 +134,30 @@ const Home: React.FC = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Trusted by Australian Businesses</h2>
-            <p className="text-xl text-gray-600">See what happens when expert implementation meets business goals.</p>
+      <section className="py-32 bg-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
+          <div className="text-center mb-24">
+            <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-6 tracking-tight leading-none">Trusted from <br />Sydney to Perth.</h2>
+            <p className="text-xl text-gray-500 font-medium max-w-2xl mx-auto">Proven results from authorized experts who live and breathe the Australian business landscape.</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-12">
             {TESTIMONIALS.map((t) => (
-              <div key={t.id} className="bg-white p-10 rounded-3xl shadow-sm border border-gray-100">
-                <div className="flex mb-6">
+              <div key={t.id} className="bg-slate-50 p-16 rounded-[60px] border border-slate-100 relative group hover:border-oho-yellow/50 transition-colors shadow-sm">
+                <div className="absolute top-10 right-16 text-oho-yellow/20 text-[160px] font-black pointer-events-none">“</div>
+                <div className="flex mb-10">
                   {[...Array(t.rating)].map((_, i) => (
-                    <i key={i} className="fas fa-star text-oho-yellow"></i>
+                    <i key={i} className="fas fa-star text-oho-yellow text-xl mr-2"></i>
                   ))}
                 </div>
-                <p className="text-xl text-gray-700 italic mb-8">"{t.text}"</p>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-700 font-bold mr-4">
+                <p className="text-2xl text-slate-700 font-medium italic mb-12 leading-relaxed relative z-10">"{t.text}"</p>
+                <div className="flex items-center pt-10 border-t border-slate-200">
+                  <div className="w-16 h-16 rounded-[24px] bg-slate-900 flex items-center justify-center text-oho-yellow font-black text-2xl mr-6 shadow-2xl group-hover:rotate-6 transition-transform">
                     {t.name.charAt(0)}
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900">{t.name}</h4>
-                    <p className="text-sm text-gray-500">{t.company}</p>
+                    <h4 className="font-black text-slate-900 text-2xl tracking-tight">{t.name}</h4>
+                    <p className="text-xs text-slate-400 font-black uppercase tracking-[0.3em] mt-1">{t.company}</p>
                   </div>
                 </div>
               </div>
@@ -97,21 +166,8 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-24 bg-oho-yellow">
-        <div className="max-w-5xl mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-black text-black mb-8">Ready to Automate Your Success?</h2>
-          <p className="text-xl font-medium text-black/80 mb-10 max-w-2xl mx-auto">
-            Stop letting manual tasks hold your team back. Book your free 30-minute consultation with our Zoho experts today.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-block px-12 py-5 bg-black text-white font-bold text-lg rounded-full hover:shadow-2xl transition-all"
-          >
-            Start Your Free Consultation
-          </Link>
-        </div>
-      </section>
+      {/* Spacing for Floating CTA */}
+      <div className="h-24 md:h-32"></div>
     </div>
   );
 };

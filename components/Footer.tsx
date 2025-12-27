@@ -5,7 +5,7 @@ import { LOGO_URL } from '../constants';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-slate-900 text-white pt-20 pb-10">
+    <footer className="bg-slate-950 text-white pt-48 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-2 md:col-span-1">
@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h4 className="font-bold text-lg mb-6 text-oho-yellow">Services</h4>
+            <h4 className="font-bold text-lg mb-6 text-oho-yellow uppercase tracking-widest text-sm">Services</h4>
             <ul className="space-y-4 text-slate-400">
               <li><Link to="/services" className="hover:text-white transition-colors">CRM Implementation</Link></li>
               <li><Link to="/services" className="hover:text-white transition-colors">Custom Automation</Link></li>
@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h4 className="font-bold text-lg mb-6 text-oho-yellow">Company</h4>
+            <h4 className="font-bold text-lg mb-6 text-oho-yellow uppercase tracking-widest text-sm">Company</h4>
             <ul className="space-y-4 text-slate-400">
               <li><Link to="/why-oho" className="hover:text-white transition-colors">Why OHO</Link></li>
               <li><Link to="/industries" className="hover:text-white transition-colors">Industries</Link></li>
@@ -47,26 +47,26 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h4 className="font-bold text-lg mb-6 text-oho-yellow">Contact</h4>
+            <h4 className="font-bold text-lg mb-6 text-oho-yellow uppercase tracking-widest text-sm">Contact</h4>
             <ul className="space-y-4 text-slate-400">
               <li className="flex items-start space-x-3">
-                <i className="fas fa-map-marker-alt mt-1"></i>
+                <i className="fas fa-map-marker-alt mt-1 text-oho-yellow"></i>
                 <span>P.O Box 1093 Windsor VIC 3181, Sydney, NSW, Australia</span>
               </li>
               <li className="flex items-start space-x-3">
-                <i className="fas fa-envelope mt-1"></i>
+                <i className="fas fa-envelope mt-1 text-oho-yellow"></i>
                 <span>care@ohocrmsoftware.com.au</span>
               </li>
               <li className="flex items-start space-x-3">
-                <i className="fas fa-phone-alt mt-1"></i>
+                <i className="fas fa-phone-alt mt-1 text-oho-yellow"></i>
                 <span>+61 480 018 157</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="pt-10 border-t border-slate-800 flex flex-col md:row justify-between items-center space-y-4 md:space-y-0 text-sm text-slate-500">
-          <p>© {new Date().getFullYear()} OHO CRM Software. Not a subsidiary of Zoho Corporation.</p>
+        <div className="pt-10 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-xs text-slate-500 font-medium">
+          <p>© {new Date().getFullYear()} OHO CRM Software. Authorized Zoho Partner Australia.</p>
           <div className="flex space-x-8">
             <a href="#" className="hover:text-white">Privacy Policy</a>
             <a href="#" className="hover:text-white">Terms of Service</a>
