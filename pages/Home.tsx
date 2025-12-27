@@ -3,7 +3,7 @@ import React from 'react';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
 import LeadQualifyBot from '../components/LeadQualifyBot';
-import { INDUSTRIES, TESTIMONIALS } from '../constants';
+import { INDUSTRIES, TESTIMONIALS, PARTNER_BADGE_URL } from '../constants';
 import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
@@ -18,20 +18,33 @@ const Home: React.FC = () => {
     <div className="bg-white">
       <Hero />
       
-      {/* Trust Bar - High Contrast */}
-      <div className="py-12 bg-slate-900 overflow-hidden relative border-y border-slate-800">
+      {/* Trust Bar - High Contrast with Image Badge */}
+      <div className="py-10 bg-gray-100 overflow-hidden relative">
         <div className="absolute inset-0 bg-oho-yellow/5"></div>
-        <div className="max-w-7xl mx-auto px-4 flex flex-wrap justify-center items-center gap-12 md:gap-24 relative z-10">
-          <div className="flex flex-col items-center md:items-start group cursor-default">
-             <span className="text-oho-yellow font-black text-2xl tracking-tighter group-hover:scale-105 transition-transform">ZOHO AUTHORIZED PARTNER</span>
-             <span className="text-slate-500 text-[10px] font-black uppercase tracking-[0.4em]">Verified Implementation Specialist</span>
+        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-10 md:gap-24 relative z-10 text-center md:text-left">
+          <div className="flex items-center group cursor-default h-16">
+             <img 
+               src={PARTNER_BADGE_URL} 
+               alt="Zoho Authorized Partner" 
+               className="h-full object-contain group-hover:scale-105 transition-transform duration-500"
+               onError={(e) => {
+                 // Fallback if the PNG is missing
+                 (e.target as HTMLImageElement).style.display = 'none';
+                 const parent = (e.target as HTMLElement).parentElement;
+                 if (parent) {
+                   const fallback = document.createElement('div');
+                   fallback.innerHTML = '<span class="text-oho-yellow font-black text-xl tracking-tighter">ZOHO AUTHORIZED PARTNER</span>';
+                   parent.appendChild(fallback);
+                 }
+               }}
+             />
           </div>
           <div className="h-10 w-px bg-slate-800 hidden lg:block"></div>
-          <div className="text-white/40 font-black text-sm tracking-[0.2em] flex gap-10">
-             <span className="hover:text-oho-yellow transition-colors">SYDNEY</span>
-             <span className="hover:text-oho-yellow transition-colors">MELBOURNE</span>
-             <span className="hover:text-oho-yellow transition-colors">BRISBANE</span>
-             <span className="hover:text-oho-yellow transition-colors">PERTH</span>
+          <div className="text-black text-[10px] md:text-xs tracking-[0.3em] flex flex-wrap justify-center gap-6 md:gap-12">
+             <span className="hover:text-oho-yellow transition-colors cursor-default uppercase">Sydney</span>
+             <span className="hover:text-oho-yellow transition-colors cursor-default uppercase">Melbourne</span>
+             <span className="hover:text-oho-yellow transition-colors cursor-default uppercase">Brisbane</span>
+             <span className="hover:text-oho-yellow transition-colors cursor-default uppercase">Perth</span>
           </div>
         </div>
       </div>

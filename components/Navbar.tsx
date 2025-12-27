@@ -5,6 +5,7 @@ import { LOGO_URL } from '../constants';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [logoError, setLogoError] = useState(false);
   const location = useLocation();
 
   const navLinks = [
@@ -22,10 +23,19 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-3">
-              <img src={LOGO_URL} alt="OHO Logo" className="w-10 h-10" />
+              {!logoError ? (
+                <img 
+                  src={LOGO_URL} 
+                  alt="OHO Logo" 
+                  className="w-10 h-10 object-contain" 
+                  onError={() => setLogoError(true)}
+                />
+              ) : (
+                <div className="w-10 h-10 bg-oho-yellow rounded-xl flex items-center justify-center font-black text-black">O</div>
+              )}
               <div className="flex flex-col text-gray-800">
-                <span className="font-bold text-xl tracking-tight leading-none">OHO CRM</span>
-                <span className="text-xs font-semibold uppercase tracking-widest">Software Consulting</span>
+                <span className="font-black text-xl tracking-tight leading-none uppercase">OHO CRM</span>
+                <span className="text-[9px] font-bold uppercase tracking-[0.3em] opacity-60">Consulting</span>
               </div>
             </Link>
           </div>
@@ -36,8 +46,8 @@ const Navbar: React.FC = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-semibold transition-colors duration-200 ${
-                  isActive(link.path) ? 'text-black border-b-2 border-oho-yellow' : 'text-gray-600 hover:text-oho-yellow'
+                className={`text-xs font-black uppercase tracking-widest transition-colors duration-200 ${
+                  isActive(link.path) ? 'text-black border-b-2 border-oho-yellow' : 'text-gray-500 hover:text-oho-yellow'
                 }`}
               >
                 {link.name}
@@ -45,7 +55,7 @@ const Navbar: React.FC = () => {
             ))}
             <Link
               to="/contact"
-              className="bg-oho-yellow text-black px-6 py-2.5 rounded-full font-bold text-sm hover:shadow-lg transition-all duration-300"
+              className="bg-black text-white px-6 py-2.5 rounded-full font-black text-xs uppercase tracking-widest hover:bg-oho-yellow hover:text-black hover:shadow-xl transition-all duration-300"
             >
               Book Consultation
             </Link>
@@ -72,7 +82,7 @@ const Navbar: React.FC = () => {
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className={`block px-3 py-2 rounded-md text-base font-medium ${
+                className={`block px-3 py-2 rounded-md text-base font-bold ${
                   isActive(link.path) ? 'bg-oho-yellow text-black' : 'text-gray-600 hover:bg-gray-50'
                 }`}
               >
@@ -82,7 +92,7 @@ const Navbar: React.FC = () => {
             <Link
               to="/contact"
               onClick={() => setIsOpen(false)}
-              className="block w-full text-center mt-4 bg-oho-yellow text-black px-3 py-3 rounded-md font-bold"
+              className="block w-full text-center mt-4 bg-black text-white px-3 py-4 rounded-xl font-black uppercase tracking-widest"
             >
               Book Consultation
             </Link>

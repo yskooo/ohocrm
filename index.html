@@ -8,13 +8,49 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-      body {
-        font-family: 'Inter', sans-serif;
+      /* Importing Montserrat from Google Fonts */
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+      
+      :root {
+        --oho-yellow: #FFD200;
       }
-      .bg-oho-yellow { background-color: #FFD200; }
-      .text-oho-yellow { color: #FFD200; }
-      .border-oho-yellow { border-color: #FFD200; }
+
+      body {
+        font-family: 'Montserrat', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: #1a1a1a;
+      }
+
+      .bg-oho-yellow { background-color: var(--oho-yellow); }
+      .text-oho-yellow { color: var(--oho-yellow); }
+      .border-oho-yellow { border-color: var(--oho-yellow); }
+
+      /* Standardize heading styles with Montserrat */
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: -0.02em;
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f8fafc;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #e2e8f0;
+        border-radius: 5px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--oho-yellow);
+      }
+
+      /* Utility for extra heavy weights if needed */
+      .font-black {
+        font-weight: 900;
+      }
     </style>
   <script type="importmap">
 {
