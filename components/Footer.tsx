@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-2 md:col-span-1">
             <Link to="/" className="flex items-center space-x-3 mb-6">
-              <img src={LOGO_URL} alt="OHO Logo" className="w-8 h-8 filter brightness-0 invert" />
+              <img src={LOGO_URL} alt="OHO Logo" className="w-8 h-8 filter" />
               <span className="font-bold text-2xl tracking-tight">OHO CRM</span>
             </Link>
             <p className="text-slate-400 mb-6 leading-relaxed">
