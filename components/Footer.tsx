@@ -79,8 +79,8 @@ const Footer: React.FC = () => {
         <div className="pt-10 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-[10px] text-slate-500 font-black uppercase tracking-[0.2em]">
           <p>© {new Date().getFullYear()} OHO CRM Software. Authorized Zoho Partner Australia.</p>
           <div className="flex space-x-8">
-            <a href="#" className="hover:text-white">Privacy Policy</a>
-            <a href="#" className="hover:text-white">Terms of Service</a>
+            <a href="/privacy" className="hover:text-white">Privacy Policy</a>
+            <a href="/terms" className="hover:text-white">Terms of Service</a>
           </div>
         </div>
       </div>

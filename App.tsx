@@ -10,6 +10,8 @@ import Industries from './pages/Industries';
 import Contact from './pages/Contact';
 import WhyOHO from './pages/WhyOHO';
 import ZohoProductPage from './pages/ZohoProductPage';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 
 const App: React.FC = () => {
   return (
@@ -23,6 +25,8 @@ const App: React.FC = () => {
             <Route path="/industries" element={<Industries />} />
             <Route path="/why-oho" element={<WhyOHO />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<TermsOfService />} />
             
             {/* Zoho Ecosystem Routes */}
             <Route path="/zoho" element={<ZohoProductPage type="ecosystem" />} />
