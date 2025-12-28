@@ -42,16 +42,6 @@ const ServicesPage: React.FC = () => {
           </div>
         ))}
       </div>
-
-      <div className="bg-slate-50 py-24">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-8">Looking for something specific?</h2>
-          <p className="text-gray-600 mb-10">We also specialize in Zoho Books, Inventory, Projects, and custom Creator apps.</p>
-          <a href="#/contact" className="font-bold text-oho-yellow border-2 border-oho-yellow px-8 py-4 rounded-full hover:bg-oho-yellow hover:text-black transition-all">
-            Inquire About Custom Services
-          </a>
-        </div>
-      </div>
     </div>
   );
 };
