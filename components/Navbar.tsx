@@ -54,8 +54,8 @@ const Navbar: React.FC = () => {
               </Link>
             ))}
             <Link
-              to="/contact"
-              className="bg-black text-white px-6 py-2.5 rounded-full font-black text-xs uppercase tracking-widest hover:bg-oho-yellow hover:text-black hover:shadow-xl transition-all duration-300"
+              to="https://schedulenow.itssolved.com.au/#/6266000002028004"
+              className="bg-black text-white px-6 py-2.5 rounded-full font-black text-xs uppercase tracking-widest hover:bg-oho-yellow hover:text-white hover:shadow-xl transition-all duration-300"
             >
               Book Consultation
             </Link>

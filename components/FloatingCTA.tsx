@@ -30,7 +30,7 @@ const FloatingCTA: React.FC = () => {
 
           <div className="flex flex-col gap-4 w-full sm:w-80">
             <Link
-              to="https://schedulenow.itssolved.com.au/#/itssolved"
+              to="https://schedulenow.itssolved.com.au/#/6266000002028004"
               className="w-full px-12 py-5 bg-black text-white font-black rounded-full hover:bg-slate-800 hover:-translate-y-1 transition-all duration-300 shadow-xl text-center flex items-center justify-center space-x-3"
             >
               <span>Book Expert Consultation</span>
