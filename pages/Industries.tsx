@@ -118,25 +118,7 @@ const Industries: React.FC = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Custom Solution Callout */}
-        <div className="mt-32 p-16 bg-white rounded-[60px] border border-slate-100 shadow-2xl text-center relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 opacity-50"></div>
-          <div className="relative z-10">
-            <span className="text-slate-400 font-bold uppercase tracking-widest text-xs mb-4 block">Unique Business Requirements?</span>
-            <h3 className="text-4xl md:text-5xl font-black text-slate-900 mb-10 max-w-3xl mx-auto leading-tight">
-              We architect custom Zoho ecosystems for <span className="text-oho-yellow">complex workflows</span>.
-            </h3>
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center px-12 py-5 bg-oho-yellow text-black font-black rounded-2xl hover:bg-black hover:text-white transition-all transform hover:scale-105 shadow-xl shadow-yellow-500/20"
-            >
-              Request a Custom Architect Session
-              <i className="fas fa-chevron-right ml-4"></i>
-            </Link>
-          </div>
-        </div>
+        </div>        
       </div>
     </div>
   );
