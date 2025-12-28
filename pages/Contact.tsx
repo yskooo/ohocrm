@@ -25,7 +25,7 @@ const Contact: React.FC = () => {
 
     try {
       // Using FormSubmit.co to route the lead to the specified email
-      const response = await fetch("https://formsubmit.co/ajax/yskomartin@gmail.com", {
+      const response = await fetch("https://formsubmit.co/ajax/care@ohocrmsoftware.com.au", {
         method: "POST",
         headers: { 
             "Content-Type": "application/json",
