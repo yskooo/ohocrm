@@ -157,32 +157,6 @@ const ZohoProductPage: React.FC<ZohoProductPageProps> = ({ type }) => {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-24 bg-slate-50 border-t border-slate-100">
-         <div className="max-w-5xl mx-auto px-4 text-center">
-            <h3 className="text-4xl font-black text-slate-900 mb-8 tracking-tight">Unlock the full potential of {content.title}</h3>
-            <p className="text-xl text-gray-600 mb-12 leading-relaxed max-w-2xl mx-auto">
-              Don't struggle with complex settings. Let our certified Australian experts handle the implementation while you focus on growing your revenue.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-6">
-              <Link 
-                to="/contact" 
-                className="px-12 py-5 bg-black text-white font-black rounded-full hover:bg-oho-yellow hover:text-black transition-all shadow-xl shadow-black/10"
-              >
-                Book Free Consultation
-              </Link>
-              <a 
-                href="https://www.zoho.com/au/crm/signup.html" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="px-12 py-5 bg-white border-2 border-slate-200 text-slate-900 font-black rounded-full hover:bg-slate-50 transition-all"
-              >
-                Try it for Free
-              </a>
-            </div>
-         </div>
-      </section>
     </div>
   );
 };
