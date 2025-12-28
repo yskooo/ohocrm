@@ -30,14 +30,14 @@ const FloatingCTA: React.FC = () => {
 
           <div className="flex flex-col gap-4 w-full sm:w-80">
             <Link
-              to="/contact"
+              to="https://schedulenow.itssolved.com.au/#/itssolved"
               className="w-full px-12 py-5 bg-black text-white font-black rounded-full hover:bg-slate-800 hover:-translate-y-1 transition-all duration-300 shadow-xl text-center flex items-center justify-center space-x-3"
             >
               <span>Book Expert Consultation</span>
               <i className="fas fa-calendar-check text-sm"></i>
             </Link>
             <a
-              href="https://www.zoho.com/au/crm/signup.html"
+              href="https://www.zoho.com/signup.html"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full px-12 py-5 bg-white/90 backdrop-blur-sm text-black font-black rounded-full border border-black/5 hover:bg-white hover:-translate-y-1 transition-all duration-300 text-center flex items-center justify-center space-x-3 shadow-sm"
