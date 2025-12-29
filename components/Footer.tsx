@@ -9,8 +9,10 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-950 text-white pt-48 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-12 mb-16">
-          <div className="col-span-2 md:col-span-1">
+        {/* Main Footer Grid - explicitly 1 column on mobile, 4 on desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+          {/* Brand Section */}
+          <div className="md:col-span-1">
             <Link to="/" className="flex items-center space-x-3 mb-6">
               {!logoError ? (
                 <img 
@@ -37,6 +39,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
+          {/* Services Section */}
           <div>
             <h4 className="font-black text-sm mb-6 text-oho-yellow uppercase tracking-[0.3em]">Services</h4>
             <ul className="space-y-4 text-slate-400 font-bold text-sm">
@@ -47,6 +50,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
+          {/* Company Section */}
           <div>
             <h4 className="font-black text-sm mb-6 text-oho-yellow uppercase tracking-[0.3em]">Company</h4>
             <ul className="space-y-4 text-slate-400 font-bold text-sm">
@@ -57,6 +61,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
+          {/* Contact Section */}
           <div>
             <h4 className="font-black text-sm mb-6 text-oho-yellow uppercase tracking-[0.3em]">Contact</h4>
             <ul className="space-y-4 text-slate-400 font-bold text-sm">

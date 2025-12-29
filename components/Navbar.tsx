@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
               )}
               <div className="flex flex-col text-gray-800">
                 <span className="font-black text-xl tracking-tight leading-none uppercase">OHO CRM</span>
-                <span className="text-[9px] font-bold uppercase tracking-[0.3em] opacity-60">Consulting</span>
+                <span className="text-[9px] font-bold uppercase tracking-[0.3em] opacity-60">Software</span>
               </div>
             </Link>
           </div>
